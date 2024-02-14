@@ -4,7 +4,7 @@ import { createServer } from "http";
 
 import { Server } from "socket.io";
 
-
+const PORT = process.env.PORT || 3000;
 
 // Creamos un servidor HTTP
 
@@ -72,7 +72,7 @@ io.on("connection", (socket) => {
 
 // El servidor comienza a escuchar en el puerto 3000
 
-server.listen(3000, () => {
+server.listen(PORT, () => {
 
   console.log("Servidor corriendo en http://localhost:3000");
 
